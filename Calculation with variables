@@ -1,0 +1,10 @@
+public class Main {
+    public static void main(String[] args){
+      /* calculation with variables */
+       int number1 = 3;
+       System.out.println(number1 + 4);
+      
+      int number2 = 6;
+      System.out.println(number1 + number2);
+    }
+}
