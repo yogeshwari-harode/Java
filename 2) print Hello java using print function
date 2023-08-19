@@ -1,0 +1,6 @@
+public class Main{
+    public static void main(String[] args)
+    {
+        System.out.print("Hello java");        // it does not insert a new line at the end of the output:
+    }
+}
