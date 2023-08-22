@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String []args)
+    {
+        System.out.print("Enter English marks : ");
+        Scanner scn=new Scanner(System.in);
+        int eng=scn.nextInt();
+        System.out.print("Enter hindi marks : ");
+        int hindi=scn.nextInt();
+        System.out.print("Enter maths marks : ");
+        int maths=scn.nextInt();
+        System.out.print("Enter physics marks : ");
+        int physics=scn.nextInt();
+        System.out.print("Enter chemistry marks : ");
+        int chemistry=scn.nextInt();
+        float Percentage=(eng+hindi+maths+physics+chemistry)*100/500;
+        System.out.print("Percentage = "+Percentage);
+        
+        
+    }
+}
