@@ -1,0 +1,86 @@
+import java.util.Scanner;
+
+ class BankAccount{
+    long Mobile_Number;
+    String name;
+    int sum;
+    float balance;
+    
+    void input()
+    {
+        Scanner inp=new Scanner(System.in);
+        System.out.println("Enter your name : ");
+        name=inp.nextLine();
+        System.out.println("Enter Mobile_Number.");
+        Mobile_Number=inp.nextLong();
+        System.out.println("Enter balance : ");
+        balance=inp.nextFloat();
+    }
+    
+    void Print()
+    {
+        System.out.println("Name : " +name+"\nMo. Number : "+Mobile_Number+"\nBalance : "+balance);
+    }
+    
+    void Deposit(float Amount)         //Add money to the account 
+    {
+        balance=balance+Amount;
+        System.out.println("Now the Amount after Deposit : "+balance);
+    }
+    void Withdraw(float Amount)         //take money from the account 
+    {
+        if(balance-Amount>=2000)
+        {
+            balance=balance-Amount;
+            System.out.println("Now the reamining balance is : "+balance);
+        }
+        else 
+        {
+            System.out.println("Amount is very low : "+balance);
+        }
+    }
+    
+}
+
+public class BankAccountDemo{
+    public static void main(String [] args)
+    {
+        BankAccount b1 = new BankAccount();
+        int opt=0; 
+        float Amount;
+        Scanner inp=new Scanner(System.in);
+        b1.input();
+        b1.Print();
+        while(opt!=4)
+        {
+            System.out.println("1. Deposit\n2. Withdraw\n3. Print\n4. Quit");
+            opt=inp.nextInt();
+            switch(opt)
+            {
+                case 1:
+                    System.out.println("Enter the Amount to be deposited : ");
+                    Amount=inp.nextFloat();
+                    b1.Deposit(Amount);
+                    break;
+                    
+                case 2:
+                    System.out.println("Enter the Amount to be Withdraw : ");
+                    Amount=inp.nextFloat();
+                    b1.Withdraw(Amount);
+                    break;
+                    
+                case 3:
+                    b1.Print();
+                    break;
+                
+                case 4:
+                    System.out.println("End of the code...");
+                    break;
+                
+                default:
+                    System.out.println("Wrong option....");
+            }
+        }
+        
+    }
+}
