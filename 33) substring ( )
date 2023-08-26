@@ -1,0 +1,7 @@
+class Main{
+    public static void main(String[]args){
+        String Str="Radha and Krishna";
+        System.out.print(Str.substring(0,5));
+        
+    }
+}
