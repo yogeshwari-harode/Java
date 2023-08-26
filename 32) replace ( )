@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[]args){
+        String name,name2;
+        Scanner scn=new Scanner(System.in);
+        System.out.print("Enter name which have 'a' as a Character : ");
+        name=scn.nextLine();
+        
+        name2=name.replace('a','b');
+        System.out.print("name2 : "+name2);
+        
+    }
+}
