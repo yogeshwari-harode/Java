@@ -1,0 +1,39 @@
+class Student{
+    private String name,regNum;
+    private int marks;
+    public void setName(String name)
+    {
+        this.name=name;
+    }
+    public void setregNum(String regNum)
+    {
+        this.regNum=regNum;
+    }
+    public void setmarks(int marks)
+    {
+        this.marks=marks;
+    }
+    
+    public String getname(){
+        return(name);
+    }
+    public String getregNum(){
+        return(regNum);
+    }
+    public int getmarks(){
+        return(marks);
+    }
+}
+
+public class EncapsulationDemo{
+    public static void main(String[] args)
+    {
+        Student s1=new Student();
+        s1.setName("Yami");
+        s1.setregNum("MCA23...");
+        s1.setmarks(85);
+        System.out.println("Name : "+s1.getname()+"\nRegNum : "+s1.getregNum()+"\nMarks : "+s1.getmarks());
+    }
+}
+
+
