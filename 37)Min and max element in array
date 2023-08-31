@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner scn = new Scanner (System.in);
+    int n;
+
+      System.out.print ("Enter the size of array : ");
+      n = scn.nextInt ();
+
+    int arr[] = new int[n];
+    
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=scn.nextInt();
+    }
+    
+    int max = arr[0];
+    int min = arr[0];
+      System.out.println ("Enter the elements of array : ");
+    for (int i = 0; i < n; i++)
+      {
+	        if (arr[i] < min)
+	             min = arr[i];
+	        if (arr[i] > max)
+	            max = arr[i];
+
+      }
+    System.out.println("Maximum :" + max);
+    System.out.println("Minimum :" + min);
+
+
+
+
+  }
+}
+
+/*
+import java.util.Scanner;
+public class P3 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter the number elements you want:");
+int n = sc.nextInt();
+int max = 0, min = 0;
+int[] arr = new int[n];
+System.out.println("Enter the values to the array:");
+for (int i = 0; i < n; i++) {
+arr[i] = sc.nextInt();
+max = arr[i] < max ? max : arr[i];
+min = i == 0 ? arr[i] : arr[i] < min ? arr[i] : min;
+}
+}
+}
+*/
