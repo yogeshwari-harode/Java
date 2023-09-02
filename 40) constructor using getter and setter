@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class Employee{
+    
+    private
+    String name;
+    int id;
+    Scanner scn=new Scanner(System.in);
+    
+    public Employee(){
+        System.out.println("Enter name : ");
+        name=scn.nextLine();
+        System.out.println("Enter id : ");
+        id=scn.nextInt();
+    }
+    
+    public String getname(){
+        return name;
+    }
+    public int getid(){
+        return id;
+    }
+    public void setname(String str){
+        this.name=str;
+    }
+    public void setid(int n){
+        this.id=n;
+    }
+}
+
+public class Main{
+    public static void main(String[]args){
+        Employee e1=new Employee();
+        System.out.println(e1.getname());
+        System.out.println(e1.getid());
+        
+        
+    }
+}
