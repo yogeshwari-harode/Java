@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[]args){
+        Scanner scn=new Scanner(System.in);
+        int n,sum=0;
+        float Percentage;
+        System.out.println("Enter number of Subjects : ");
+        n=scn.nextInt();
+        System.out.println("Enter marks of all Subjects : ");
+        int arr[]=new int[n];
+        for(int i=0;i<n; i++){
+            arr[i]=scn.nextInt();
+            sum=sum+arr[i];
+        }
+        System.out.println("Total Marks : "+sum);
+        Percentage=(float)(sum/n);
+        System.out.println("Percentage is  : "+Percentage);
+    }
+}
