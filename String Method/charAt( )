@@ -6,6 +6,6 @@ public class Main{
         Scanner scn = new Scanner(System.in);
         System.out.println("Enter any name : ");
         str=scn.nextLine();
-        System.out.println("Length of String is : "+str.charAt(3));
+        System.out.println("character at 3 position : "+str.charAt(3));
     }
 }
