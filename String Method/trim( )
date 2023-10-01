@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[]args){
+    Scanner scn=new Scanner(System.in);
+        String str;
+        System.out.print("Enter any String : ");
+        str=scn.nextLine();
+        System.out.println(str.trim());
+        //it is used to remove space if we Enter space before or after the string
+        //  "    yogeshwari "
+        //output 
+        //  "yogeshwari"
+    }
+}
