@@ -3,7 +3,7 @@ public class Main{
     public static void main(String[]args){
     Scanner scn=new Scanner(System.in);
         String str;
-        System.out.print("Enter Capital letter string to see the change : ");
+        System.out.print("Enter Small letter string to see the change : ");
         str=scn.nextLine();
         System.out.println("Upper case : "+str.toUpperCase());
     }
