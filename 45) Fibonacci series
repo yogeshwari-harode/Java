@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main {
+    
+    
+    //fibonacci series
+    //0,1,1,2,3,5,8,13,21.......
+    
+        static int fibonacci(int n){
+            if(n==0)
+                return 0;
+            else if(n==1)
+                return 1;
+            else
+                return fibonacci(n-1)+fibonacci(n-2);
+    
+        }
+    
+       public static void main(String[] args) {
+        int n,ans;
+        System.out.println("Enter which term of fibonacci series you want : ");
+        Scanner scn=new Scanner(System.in);
+        n=scn.nextInt();
+        ans=fibonacci(n);
+        System.out.println(n+"th term of fibonacci is : "+ans);
+    }
+}
+ 
