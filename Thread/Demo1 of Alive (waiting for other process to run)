@@ -1,0 +1,52 @@
+public class Main extends Thread { 
+    public static int amount = 0;
+
+    public static void main(String[] args) 
+    {
+        Main obj= new Main();
+
+        obj.start();    //start method directly call run method
+        //1st print
+        System.out.println("1st print "+amount);
+         
+        amount++; 
+        //2nd print
+        System.out.println("2nd print "+amount);
+    }
+    public void run() {
+        System.out.println("This is run method.");
+        amount++;
+    }
+}
+
+
+
+
+// CORRECTION OF ABOVE PROGRAM (MAKE THE ABOVE PROGRAM AS WAITING FOR OTHER METHODS)
+/*
+//RUN BORTH THIS CODE SO WE CAN UNDERSTAND THIS CONCEPT BETTER
+public class Main extends Thread { 
+    public static int amount = 0;
+
+    public static void main(String[] args) 
+    {
+        Main obj= new Main();
+
+        obj.start();    //start method directly call run method
+        //1st print
+
+        // ISALIVE WAIT FOR OTHER METHODS THEN CONTINUE 
+        while(obj.isAlive()){
+            System.out.println("Waiting");
+        }
+        System.out.println("1st print "+amount);
+         
+        amount++;   
+        System.out.println("2nd print "+amount);
+    }
+    public void run() {
+        System.out.println("This is run method.");
+        amount++;
+    }
+}
+*/
