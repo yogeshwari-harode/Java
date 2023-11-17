@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+
+interface client{
+    void input();   //(Bydefault)  abstract  +  public 
+    void output(); //(Bydefault)  abstract  +  public
+}
+
+class Raju implements client{
+    String name;
+    double salary;
+    Scanner scn=new Scanner(System.in);
+    public void input(){                                        //The method define in interface must be public here
+        System.out.print("Enter your name : ");
+        name=scn.nextLine();
+        
+        System.out.print("Enter your Salary : ");
+        salary=scn.nextDouble();
+    }
+    public void output(){                                          //The method define in interface must be public here
+        System.out.print("Name : "+name+" Salary : "+salary);
+    }
+    public static void main(String[]args){
+        client c=new Raju();
+        c.input();
+        c.output();
+    }
+}
