@@ -1,0 +1,40 @@
+class A{
+    int a;
+    String name;
+    void show(){
+        System.out.print(a+" "+name);
+    }
+}
+
+class B{
+    public static void main(String[]args){
+    A obj=new A();
+    obj.show();
+    }
+}
+
+/*
+class A{
+    int a;
+    String name;
+    A(){            //Default Constructor
+    a=10;
+    name="Yami";
+    }
+    void show(){
+        System.out.print(a+" "+name);
+    }
+}
+
+class B{
+    public static void main(String[]args){
+    A obj=new A();
+    obj.show();
+    }
+}
+*/
+
+
+// Constructor which have no parameter called defult constructor
+//if we dont create default constructor compiler create default constructor and initialize the dafault values to the variable
+
