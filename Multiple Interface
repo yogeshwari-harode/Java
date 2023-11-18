@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+interface Add{
+    void addition();
+}
+
+interface Subtract{
+    void subtraction();
+}
+class Main implements Add,Subtract{                      //implements multiple interfaces
+    Scanner scn=new Scanner(System.in);
+    
+    public void addition(){
+        int a,b;
+        System.out.print("Enter two numbers for addition :");
+        a=scn.nextInt();
+        b=scn.nextInt();
+        System.out.print(a+b+"\n");
+    }
+    public void subtraction(){
+        int a,b;
+        System.out.print("Enter two numbers for subtraction :");
+        a=scn.nextInt();
+        b=scn.nextInt();
+        System.out.print(a-b);
+    }
+    public static void main(String[]args){
+        System.out.print("Multiple Intrface\n");
+        Add a1=new Main();
+        Subtract s1=new Main();
+        a1.addition();
+        s1.subtraction();
+    }
+}
