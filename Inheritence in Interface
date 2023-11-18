@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+interface Radha{
+    void addition();
+}
+interface Jyoti extends Radha{
+    void subtraction();
+}
+class Shyam implements Jyoti{
+    Scanner scn=new Scanner(System.in);
+    
+    public void addition(){
+        int a=10,b=20,c;
+        c=a+b;
+        System.out.print("Addition : "+c+"\n");
+    }
+    public void subtraction(){
+        int a=20,b=10,c;
+        c=a-b;
+        System.out.print("Subtraction : "+c);
+    }
+    
+}
+
+class Main{
+    public static void main(String[]args){
+        System.out.print("Inheritence in Interface\n");
+        Jyoti j=new Shyam();
+        j.addition();
+        j.subtraction();
+    }
+}
