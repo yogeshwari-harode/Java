@@ -1,6 +1,4 @@
 class A{
-    int a;
-    String b;
     A(int a,int b){
         System.out.println(a+b);
     }
