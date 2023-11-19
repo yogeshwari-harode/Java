@@ -1,0 +1,25 @@
+//Single Inheritance (1 super class and 1 sub class)
+
+class student{
+    int roll,marks;
+    String name;			
+    void input(){
+        System.out.println("Enter Roll name and marks : ");
+    }
+}
+class Radha extends student{
+    void display(){
+        roll=1;
+        name="Radha";
+        marks=90;
+        System.out.println(roll+" "+name+" "+marks);
+    }
+}
+
+class Main{
+    public static void main(String[]args){
+        Radha obj=new Radha();
+        obj.input();
+        obj.display();
+    }
+}
