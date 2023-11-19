@@ -21,7 +21,7 @@ public class Main{
         }
         catch(Exception e){
             System.out.println("\nCatch block of Exception");
-            System.out.println("Exception handle by Exception");
+            System.out.println("All type Exception handle");
         }
     }
 }
