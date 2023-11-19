@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class NotEligible extends Exception {
+    public NotEligible(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        int age;
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Enter your age: ");
+        age = scn.nextInt();
+        
+        try {
+            if (age < 18)
+                throw new NotEligible("Not Eligible for Vote");
+        } catch (NotEligible e) {
+            System.out.println("Exception here is: " + e.toString());
+        }
+    }
+}
