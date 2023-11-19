@@ -17,7 +17,7 @@ public class Main{
         }
         catch(ArrayIndexOutOfBoundsException e){
             System.out.println("\nCatch block of NumberFormatException");
-            System.out.println("Can't convert null to Upper Case");
+            System.out.println("Can't Access the element other than the array element");
         }
         catch(Exception e){
             System.out.println("\nCatch block of Exception");
