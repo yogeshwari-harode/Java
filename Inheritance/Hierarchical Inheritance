@@ -1,0 +1,38 @@
+//Hierarchical Inheritance
+
+
+
+class A{
+    int a,b,c;
+    void add(){					//  Addition
+        a=20;b=10;
+        c=a+b;
+        System.out.println("Addition : "+c);
+    }
+}
+class B extends A{
+    void sub(){					//  Addition,Subtraction
+        a=20;b=10;
+        c=a-b;
+        System.out.println("Subtraction : "+c);
+    }
+}
+
+class C extends A{
+    void multi(){					//  Addition,Multiplication
+        a=20;b=10;
+        c=a*b;
+        System.out.println("Multiplication : "+c);
+    }
+}
+
+class Main{
+    public static void main(String[]args){
+        B objB=new B();
+        C objC=new C();
+        objB.add();
+        objB.sub();
+        objC.add();
+        objC.multi();
+    }
+}
