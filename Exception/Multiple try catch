@@ -8,14 +8,14 @@ public class Main{
         try{
             c=a/b;
         }
-        catch(Exception e){
+        catch(ArithmeticException e){
             System.out.println("Catch block of ArithmeticException");
             System.out.println("Can't divide with zero");
         }
         try{
             System.out.println(arr[6]);
         }
-        catch(Exception e){
+        catch(ArrayIndexOutOfBoundsException e){
             System.out.println("\nCatch block of ArrayIndexOutOfBoundsException");
             System.out.println("Can't access the element other than array elements");
         }
