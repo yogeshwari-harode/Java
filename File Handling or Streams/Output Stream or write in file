@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.Scanner;
+public class DAQue1{
+    public static void main(String[]args)throws IOException
+    {
+        Scanner scn=new Scanner(System.in);
+        System.out.println("Enter your data to write in the file and press x to stop writing: ");
+        FileOutputStream f=new FileOutputStream("demo.c");
+        int c;
+        do{
+            c=scn.next().charAt(0);
+            f.write(c);
+        }while(c!='x');
+        f.close();
+    }
+}
