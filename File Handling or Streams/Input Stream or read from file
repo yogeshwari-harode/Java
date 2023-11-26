@@ -1,0 +1,14 @@
+import java.io.*;
+public class DAQue1{
+    public static void main(String[]args)throws FileNotFoundException, IOException
+    {
+        System.out.println("content in file: ");
+        FileInputStream f=new FileInputStream("demo.c");
+        int c;
+        while(f.available()>0){
+            c=f.read();
+            System.out.print((char)c);
+        }
+        f.close();
+    }
+}
