@@ -1,0 +1,15 @@
+import java.io.*;
+class renameFile{
+	public static void main(String[]args){
+		
+	File f=new File("C:\\Users\\lenovo\\Desktop\\VIT SYLLABUS\\yami.txt");
+	File f1=new File("C:\\Users\\lenovo\\Desktop\\VIT SYLLABUS\\yaminew.txt");
+		if(f.exists()){
+			System.out.println(f.renameTo(f1));
+			System.out.println("File updated by new name");
+		}
+		else{
+			System.out.println("File not exists");
+		}
+  }
+}
