@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+class WrongNameException extends Exception {
+    public WrongNameException(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+
+        try {
+            System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+        name = name.trim();
+        int count = 0;
+        for (int i = 0; i < name.length(); i++) {
+            if (name.charAt(i) == ' ') {
+                count++;
+            }
+        }
+
+        boolean chCount = true; // Declare chCount outside the loop
+
+        if (count != 1) {
+            throw new WrongNameException("Invalid name format");
+        } else {
+            for (int i = 0; i < name.length(); i++) {
+                if (!(Character.isLetter(name.charAt(i)) || name.charAt(i)==' ')) {
+                    chCount = false;
+                    break;
+                }
+            }
+        }
+            if (count != 1 || !chCount) { // Corrected condition
+                throw new WrongNameException("Invalid name format");
+            }
+
+            System.out.println("Name is valid.");
+        } catch (WrongNameException e) {
+            System.out.println("Error: " + e.toString());
+        } 
+    }
+}
