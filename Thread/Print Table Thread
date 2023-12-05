@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class table{
+	public static void main(String[]args){
+		table1 obj=new table1();
+		MyThread1 t1=new MyThread1(obj);
+		MyThread2 t2=new MyThread2(obj);
+		t1.start();
+		t2.start();
+	}
+}
+
+class table1{
+	synchronized void printable(int n)
+	{
+		for(int i=1;i<=5;i++){
+			System.out.println(n+ " * "+i + " = "+n*i);
+		}
+	}
+}
+
+
+class MyThread1 extends Thread{
+	table1 t;
+	MyThread1(table1 t){
+		this.t=t;
+	}
+	public void run(){
+		t.printable(2);
+	}
+}
+class MyThread2 extends Thread{
+	table1 t;
+	MyThread2(table1 t){
+		this.t=t;
+	}
+	public void run(){
+		t.printable(3);
+	}
+}
