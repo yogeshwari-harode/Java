@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class rough2 {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int a, b, c;
+        a = scn.nextInt();
+        b = scn.nextInt();
+        c = scn.nextInt();
+
+        double det = b * b - 4 * a * c;
+
+        double root1 = (-b - Math.sqrt(det)) / (2 * a);
+        double root2 = (-b + Math.sqrt(det)) / (2 * a);
+
+        // det > 0 real and distinct
+        // det = 0 real and equal
+        // det < 0 imaginary or complex
+        if (det < 0) {
+            System.out.println("Imaginary roots");
+        } else {
+            System.out.printf("%.2f%n", root1);
+            System.out.printf("%.2f%n", root2);
+        }
+
+        scn.close();
+    }
+}
