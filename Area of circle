@@ -1,0 +1,12 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String[]args){
+        float r;
+        final float PI=3.14f;                   //we cannot  assign any new value to PI beacuse final keyword is there
+        Scanner scn=new Scanner(System.in);
+        
+        System.out.println("Enter Radius of Circle : ");
+        r=scn.nextFloat();
+        System.out.println("Area of Circle = "+(PI*r*r));
+    }
+}
