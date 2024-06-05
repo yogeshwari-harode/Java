@@ -1,0 +1,8 @@
+import java.util.Arrays;
+class Main{
+    public static void main(String[]args){
+        int[] arr={97,96,94};
+        Arrays.sort(arr);               //94,96,97
+        System.out.println(arr[0]);
+    }
+}
