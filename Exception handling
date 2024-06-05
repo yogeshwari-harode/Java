@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String[]args){
+        
+        int[] marks={90,97,95};
+            
+        try {
+            System.out.print(marks[5]);
+        } catch(Exception exception) {
+            
+        }
+        System.out.println("Hey! This is Yogeshawri...");
+    }
+}
