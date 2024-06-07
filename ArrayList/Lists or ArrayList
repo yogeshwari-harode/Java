@@ -1,18 +1,16 @@
 import java.util.*;
 
-public class Main
-{
-	public static void main(String[] args) {
-        List<String> list=new ArrayList<String>();
-	// ArrayList<String> list=new ArrayList<String>();
+class ArrayListDemo{
+        public static void main(String[] args) {
+                ArrayList<String> mylist=new ArrayList<>();
+                mylist.add("Apple");
+                mylist.add("Mango");
+                mylist.add("Banana");
+                mylist.add("Mango");
+		//List allow Duplicates also
 
-        list.add("Banglore");
-        list.add("Pune");
-        list.add("Pune");
-        //List allow duplicates also
-
-        for(int i=0 ; i<list.size() ; i++){
-            System.out.println(list.get(i));
+                for(int i=0 ; i<mylist.size() ; i++){
+                        System.out.println(mylist.get(i));
+                }
         }
-	}
 }
