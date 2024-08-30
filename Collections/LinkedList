@@ -1,47 +1,142 @@
-import java.io.*;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Scanner;
 
 public class Main {
-    private static Scanner scn = new Scanner(System.in);
-    private static Collection<String> list = new LinkedList<String>();
 
-    public static void main(String[] args) {
-        while (true) {
-            System.out.println("1. Add item to list\n2. Delete item from list\n3. Exit");
-            int choice = scn.nextInt();
-            scn.nextLine();  // Consume newline character
-            
-            switch (choice) {
-                case 1:
-                    Add();
-                    break;
-                case 2:
-                    Delete();
-                    break;
-                case 3:
-                    System.out.println("Exiting...");
-                    return;  // Exit the program
-                default:
-                    System.out.println("No Such Option Available");
-                    break;
+    private static Scanner scn = new Scanner(System.in);
+    private static LinkedList<Integer> LL = new LinkedList<>();
+
+    public static void addAtLast() {
+        System.out.print("Enter Element to add in front: ");
+        Integer element = scn.nextInt();
+        LL.addLast(element);
+        System.out.println("LinkedList after adding the element: " + LL);
+    }
+    public static void addAtFront() {
+        System.out.print("Enter Element to add in last: ");
+        Integer element = scn.nextInt();
+        LL.addFirst(element);
+        System.out.println("LinkedList after adding the element: " + LL);
+    }
+    
+    public static void deleteFromFront(){
+        if(LL.isEmpty())
+            System.out.println("List is Empty.");
+        else{
+            LL.removeFirst();
+            System.out.println("list after removeFirst : "+LL);
+        }
+    }
+    
+    public static void deleteFromLast(){
+        if(LL.isEmpty())
+            System.out.println("List is Empty.");
+        else{
+            LL.removeLast();
+            System.out.println("list after removeLast : "+LL);
+        }
+    }
+    
+    public static void UpdateElement(){
+        if(LL.isEmpty())
+            System.out.println("List is Empty.");
+        else{
+            System.out.println("Enter index which element u want to edit : ");
+            int index=scn.nextInt();
+            System.out.println("Enter new element : ");
+            Integer element=scn.nextInt();
+            LL.set(index,element);
+            System.out.println("List After updating element : "+LL);
+        }
+    }
+    
+    public static void firstIndex(){
+        if(LL.isEmpty())
+            System.out.println("List is Empty.");
+        else{
+            System.out.println("Enter element to get firstindex : ");
+            int element=scn.nextInt();
+            if(LL.contains(element))
+                System.out.println("firstindex of "+element+" :"+LL.indexOf(element));
+            else
+                System.out.println("Element not found.");
+        }
+    }
+    
+    public static void lastIndex(){
+        if(LL.isEmpty())
+            System.out.println("List is Empty.");
+        else{
+            System.out.println("Enter element to get lastIndex : ");
+            int element=scn.nextInt();
+            if(LL.contains(element))
+                System.out.println("firstindex of "+element+" :"+LL.lastIndexOf(element));
+            else
+                System.out.println("Element not found.");
+        }
+    }
+    
+    public static void display() {
+        if (LL.isEmpty()) {
+            System.out.println("List is Empty.");
+        } else {
+            System.out.println("List: " + LL);
+        }
+    }
+    
+    public static void search(){
+        if (LL.isEmpty()) {
+            System.out.println("List is Empty.");
+        } else {
+            System.out.println("Enter element to search");
+            int element=scn.nextInt();
+            if(LL.contains(element)){
+                System.out.println("Element found at index "+LL.indexOf(element));
+            }
+            else{
+                System.out.println("Element not found.");
             }
         }
     }
 
-    private static void Add() {
-        System.out.println("Enter item to add:");
-        String item = scn.nextLine();
-        list.add(item);
-        System.out.println("List after adding item: " + list);
-    }
-
-    private static void Delete() {
-        System.out.println("Enter item to delete:");
-        String item = scn.nextLine();
-        if (list.remove(item)) {
-            System.out.println("List after removing item: " + list);
-        } else {
-            System.out.println("Item not found in the list.");
+    public static void main(String[] args) {
+        while (true) {
+            System.out.println("1. Add Element at last\n2. Add Element at front\n3. Delete Element from front\n4. Delete Element from last\n5. Update Element\n6. Search\n7. Print LinkedList\n8. First index of element\n9. Last index of element\n10. Exit");
+            int choice = scn.nextInt();
+            scn.nextLine(); // Consume newline
+            switch (choice) {
+                case 1:
+                    addAtLast();
+                    break;
+                case 2:
+                    addAtFront();
+                    break;
+                case 3:
+                    deleteFromFront();
+                    break;
+                case 4:
+                    deleteFromLast();
+                    break;
+                case 5:
+                    UpdateElement();
+                    break;
+                case 6:
+                    search();
+                    break;
+                case 7:
+                    display();
+                    break;
+                case 8:firstIndex();
+                    break;
+                case 9:lastIndex();
+                    break;
+                case 10:
+                    System.out.println("Exiting...");
+                    scn.close();
+                    return;
+                default:
+                    System.out.println("No such option available");
+            }
         }
     }
 }
