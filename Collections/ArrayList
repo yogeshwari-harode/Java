@@ -1,0 +1,130 @@
+import java.util.*;
+
+public class Main {
+
+    public static Scanner scn = new Scanner(System.in);
+    public static List<Integer> myList = new ArrayList<Integer>();
+
+    public static void add() {
+        System.out.print("Enter Element to add : ");
+        int element = scn.nextInt();
+        myList.add(element);
+        System.out.println("List after adding the element : " + myList);
+    }
+
+    public static void delete() {
+        if(myList.isEmpty()){
+            System.out.println("List is Empty.");
+        }
+        else{
+            System.out.print("Enter Element to delete : ");
+            int element = scn.nextInt();
+            if (myList.contains(element)) {
+                myList.remove(Integer.valueOf(element));
+                System.out.println("List after removing element " + element + " is " + myList);
+            } 
+            else {
+                System.out.println("Element not found.");
+            }
+        }
+        
+    }
+    
+    public static void update(){
+        if(myList.isEmpty()){
+            System.out.println("List is Empty.");
+        }
+        else{
+            System.out.println("Enter index of element which u want to change :");
+            int index=scn.nextInt();
+            System.out.print("Enter new element : ");
+            int element=scn.nextInt();
+            myList.set(index,element);
+            System.out.print("Updated list : "+myList);
+        }
+    }
+    
+    public static void search(){
+        if(myList.isEmpty()){
+            System.out.println("List is Empty.");
+        }
+        else{
+            System.out.print("Enter Element to search : ");
+            int element=scn.nextInt();
+            if(myList.contains(element))
+                System.out.println("Element found at index "+myList.indexOf(element));
+            else
+                System.out.println("Element not found.");
+        }
+    }
+    
+    public static void display(){
+        if(myList.isEmpty())
+            System.out.println("List is Empty.");
+        else
+            System.out.println("List : "+myList);
+    }
+    
+    public static void firstIndex(){
+        if(myList.isEmpty()){
+            System.out.println("List is Empty.");
+        }
+        else{
+            System.out.print("Enter Element to search from front: ");
+            int element=scn.nextInt();
+            if(myList.contains(element))
+                System.out.println("first index of "+element+" is "+myList.indexOf(element));
+            else
+                System.out.println("Element not found.");
+        }
+    }
+    
+    public static void lastIndex(){
+        if(myList.isEmpty()){
+            System.out.println("List is Empty.");
+        }
+        else{
+            System.out.print("Enter Element to search : ");
+            int element=scn.nextInt();
+            if(myList.contains(element))
+                System.out.println("last index of "+element+" is "+myList.lastIndexOf(element));
+            else
+                System.out.println("Element not found.");
+        }
+    }
+
+    public static void main(String[] args) {
+        while (true) {
+            System.out.println("1. Add Element\n2. Delete Element\n3. Update Element\n4. Search\n5. Print List\n6. first index of element\n7. Last index of element\n8. Exit\n");
+            int choice = scn.nextInt();
+            switch (choice) {
+                case 1:
+                    add();
+                    break;
+                case 2:
+                    delete();
+                    break;
+                case 3:
+                    update();
+                    break;
+                case 4:
+                    search();
+                    break;
+                case 5:
+                    display();
+                    break;
+                case 6:
+                    firstIndex();
+                    break;
+                case 7:
+                    lastIndex();
+                    break;
+                case 8:
+                    System.out.println("Exiting...");
+                    return;
+                default:
+                    System.out.println("No such option available");
+            }
+        }
+    }
+}
