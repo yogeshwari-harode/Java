@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[]args){
+        Scanner scn=new Scanner(System.in);
+        System.out.println("Enter size of LinkedList : ");
+        int n=scn.nextInt();
+        scn.nextLine();
+        
+        LinkedList<String>list=new LinkedList<>();
+        
+        System.out.println("Enter "+n+" LinkedList elements :");
+        for(int i=0 ; i<n ; i++){
+            String str=scn.nextLine();
+            list.add(str);
+        }
+        System.out.println("List : ");
+        System.out.println(list);
+        
+        System.out.println("Enter word to search : ");
+        String target=scn.nextLine();
+        
+        if(list.contains(target)){
+            System.out.println("Yes the given word is present in the LinkedList");
+        }
+        else{
+            System.out.println("The Given word is not present in the LinkedList");
+        }
+    }
+}
