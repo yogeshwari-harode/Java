@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[]args){
+        Scanner scn=new Scanner(System.in);
+        System.out.println("Enter size of LinkedList : ");
+        int n=scn.nextInt();
+        
+        LinkedList<Integer>list=new LinkedList<>();
+        
+        System.out.println("Enter "+n+" LinkedList elements :");
+        for(int i=0 ; i<n ; i++){
+            int num=scn.nextInt();
+            list.add(num);
+        }
+        System.out.println("List : ");
+        System.out.println(list);
+        
+        System.out.println("Enter element to remove : ");
+        int target=scn.nextInt();
+        
+        if(list.contains(target)){
+            list.remove(Integer.valueOf(target));
+            System.out.println("List After removing the element : "+list);
+        }
+        else{
+            System.out.println("Element not found in the list");
+        }
+    }
+}
