@@ -1,0 +1,42 @@
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner scn=new Scanner(System.in);
+        System.out.println("Enter the size of the array : ");
+        int n=scn.nextInt(); //array size
+        int arr[]=new int[n];
+        
+        //For Taking Array elements from user
+        System.out.println("Enter Array Elements : ");
+        for(int i=0 ; i<n ; i++){
+            arr[i]=scn.nextInt();
+        }
+        
+        //print Array Elements
+        System.out.println("Original Array : ");
+        for(int i=0 ; i<n ; i++){
+            System.out.print(arr[i]+" ");
+        }
+        
+        
+        //For Sorting the Array
+        int temp=0;
+        for(int i=0 ; i<n ; i++){
+            for(int j=i+1 ; j<n ; j++){
+                if(arr[j]<arr[i]){
+                   temp=arr[i] ;
+                   arr[i]=arr[j];
+                   arr[j]=temp;
+                }
+            }
+        }
+        
+        //Printing Sorted Array
+        System.out.println("\nSorted Array : ");
+        for(int i=0 ; i<n ; i++){
+            System.out.print(arr[i]+" ");
+        }
+        
+    }
+}
